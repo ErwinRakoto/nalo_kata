@@ -82,7 +82,7 @@ class IceBowlViewSet(GenericViewSet,
         glace_id = data.get('glace_id')
         number_ice_scoop = int(data.get('nb_boule'))
 
-        if not glace_id or number_ice_scoop:
+        if not glace_id or not number_ice_scoop:
             # TODO : Empty URL's to complete
             return Response('Veullez renseigner les params glace_id et nb_boule', status.HTTP_206_PARTIAL_CONTENT)
 

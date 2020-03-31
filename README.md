@@ -42,12 +42,24 @@ $ python manage.py test
 ```
 
 # Annexes USE :
+First :
 [LOAD DATA IN BASE](http://localhost:8000/cron/cron/init-ice_bowl/)  
+
+See :
 [LIST ICE BOWLS](http://localhost:8000/api/v1/icebowl/list_bowl/)  
 
-EXAMPLE OF URL to make a command :
-http://localhost:8000/api/v1/icebowl/ice_command/?glace_id=2&nb_boule=1  
+The user can make a command as follow. In Fact Front will return glace_id and asked ice scoop number
 
+Example of URL to make a command :
+http://localhost:8000/api/v1/icebowl/ice_command/?glace_id=2&nb_boule=1  
+We can try to see the out of stock situation :
+http://localhost:8000/api/v1/icebowl/ice_command/?glace_id=2&nb_boule=45 
+
+Then the waiter can see the command 
 EXAMPLE of URL to get an order command :
-http://localhost:8000/api/v1/icebowl/list_command/?num_commande=1585682598  
+http://localhost:8000/api/v1/icebowl/list_command/?num_commande=####
+Change the number #### with order_number
+
+if you lost order_command just follow this link :
+[All COMMANDS](http://localhost:8000/api/v1/icebowl/list_command/)  
 
