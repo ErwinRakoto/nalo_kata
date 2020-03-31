@@ -58,8 +58,11 @@ class IceBowlViewSet(GenericViewSet,
         data = self.request.GET
         order_command = data.get('num_commande')
 
-        queryset = Command.objects.filter(order_command=order_command)
-        # queryset = Command.objects.all()
+        if order_command:
+            queryset = Command.objects.filter(order_command=order_command)
+        else:
+            # Dangerous, only for dev mod ..
+            queryset = Command.objects.all()
 
         return Response(CommandSerializer(queryset, many=True).data, status=status.HTTP_200_OK)
 
@@ -78,6 +81,10 @@ class IceBowlViewSet(GenericViewSet,
 
         glace_id = data.get('glace_id')
         number_ice_scoop = int(data.get('nb_boule'))
+
+        if not glace_id or number_ice_scoop:
+            # TODO : Empty URL's to complete
+            return Response('Veullez renseigner les params glace_id et nb_boule', status.HTTP_206_PARTIAL_CONTENT)
 
         queryset = self.get_queryset()
         queryset = queryset.filter(ice_id=glace_id)

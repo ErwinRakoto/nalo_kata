@@ -32,6 +32,9 @@ Finally Start localMod :
 $ python manage.py runserver  
 ```
 
+Fill the database : 
+[LOAD DATA IN BASE](http://localhost:8000/cron/cron/init-ice_bowl/)  
+
 ### Tests 
 
 ```
