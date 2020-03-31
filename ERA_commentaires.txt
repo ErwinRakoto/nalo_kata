@@ -1,0 +1,27 @@
+Sujet assez complet.
+Le back balaie une bonne partie des aspects de Django.
+Le modèle relationnel est assez simple. Suffisant pour travailler directement. Il reste néanmoins les aspects Sérializer
+à traiter qui aurait pu être intéressant.
+
+
+Commentaire personnel :
+
+Front > non réalisé.
+    Les appels sont fait directement sur PostMan
+Partie Admin > non réalisée.
+    Je n'ai pas travaillé avec un site Django admin. Nous traitons les autorisations grâce à un module,
+    et donnons les accès aux partis du site avec des classes "Permissions", vérifiant l'habilitation.
+    Cela donne un comportement similaire et permet de partitionner l'appli.
+
+Structure :
+J'ai légèrement modifié la structure par défaut.
+J'ai l'habitude d'encapsuler les fichiers de core dans un répertoire backend (asgi, settings, urls, wsgi) à la même
+hauteur qu'un module. Je ne l'ai pas fait ici.
+
+Tests :
+Je n'ai pas cherché à recouvrir tout le code, seulement mettre des cas d'utilisation assez mal regroupés, pour
+"exempler".
+Remarque :
+    J'ai réalisé les tests sur un appel API des URL's. J'aurais pu également mocker du contenu et appeler directement
+    les classes et fonctions avec les paramètres.
+    Je ne me suis pas renseigné sur la pertinence des deux méthodes, et donc choisis celle ci arbitrairement..
