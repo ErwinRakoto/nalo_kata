@@ -28,3 +28,11 @@ Remarque :
 
 Base de Donnée :
     Elle se remplie en lançant l'url de la cron_init .. à améliorer ..
+
+Pylint:
+    Je n'ai pas souhaité faire tourner le linter sur le code. Je le fait systématiquement en temps normal, j'ai
+    estimé que cela n'étais pas forcément nécessaire pour ce projet, le code étant assez simple.
+    
+
+Bonne Lecture,
+Erwin
