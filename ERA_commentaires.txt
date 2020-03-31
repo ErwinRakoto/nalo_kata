@@ -25,3 +25,6 @@ Remarque :
     J'ai réalisé les tests sur un appel API des URL's. J'aurais pu également mocker du contenu et appeler directement
     les classes et fonctions avec les paramètres.
     Je ne me suis pas renseigné sur la pertinence des deux méthodes, et donc choisis celle ci arbitrairement..
+
+Base de Donnée :
+    Elle se remplie en lançant l'url de la cron_init .. à améliorer ..
